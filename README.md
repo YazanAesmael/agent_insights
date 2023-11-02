@@ -12,24 +12,25 @@ This Android application allows users to set a custom status message that is aut
 
 To run this project, clone the repository and import it into Android Studio.
 
-#git clone 
+## git clone 
+URL: https://github.com/YazanAesmael/agent_insights.git
 Open Android Studio, go to File -> New -> Project from Version Control & paste the URL of the cloned repository.
 
-#Prerequisites
+## Prerequisites
 Before you begin, ensure you have met the following requirements:
 
 You have installed the latest version of Android Studio and the Android SDK.
 You have a basic understanding of Kotlin and Android development.
 You have a device or emulator running Android API level 21 (Lollipop) or higher.
 
-#Setup
+## Setup
 To set up the project:
 
 Open the project in Android Studio.
 Sync the project with Gradle files.
 Build the project by clicking on Build -> Make Project.
 
-#Usage
+## Usage
 After installing the app, follow these steps:
 
 Launch the app.
@@ -44,5 +45,5 @@ SEND_SMS: To send SMS messages.
 READ_CALL_LOG: To check for missed calls.
 Make sure to grant these permissions in your device settings or when prompted by the app.
 
-Contact
+## Contact
 Your Name – Yazan Aesmael
