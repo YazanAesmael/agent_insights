@@ -2,6 +2,7 @@
 
 This Android application allows users to set a custom status message that is automatically sent as an SMS to incoming calls that are missed. The app is built using Kotlin and the latest Jetpack Compose UI toolkit, with Hilt for dependency injection and ViewModel for managing UI-related data.
 
+
 This Android app is built with Kotlin and utilizes the modern Jetpack Compose for the UI, follows the MVVM (Model-View-ViewModel) architectural pattern for clean code structure, and leverages Hilt for dependency injection.
 
 ## Features
