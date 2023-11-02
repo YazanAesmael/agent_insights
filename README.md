@@ -46,4 +46,4 @@ READ_CALL_LOG: To check for missed calls.
 Make sure to grant these permissions in your device settings or when prompted by the app.
 
 ## Contact
-Your Name – Yazan Aesmael
+Yazan Aesmael
