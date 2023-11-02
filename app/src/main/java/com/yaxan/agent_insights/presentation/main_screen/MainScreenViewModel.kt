@@ -1,10 +1,7 @@
 package com.yaxan.agent_insights.presentation.main_screen
 
-import androidx.compose.runtime.collectAsState
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.yaxan.agent_insights.domain.call_receiver.CallReceiver
-import com.yaxan.agent_insights.domain.model.PhoneCall
 import com.yaxan.agent_insights.domain.repository.Repository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow

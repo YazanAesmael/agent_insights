@@ -1,4 +1,4 @@
-package com.yaxan.agent_insights.domain.call_receiver
+package com.yaxan.agent_insights.data.call_receiver
 
 import android.Manifest
 import android.content.BroadcastReceiver
@@ -19,7 +19,7 @@ class CallReceiver : BroadcastReceiver() {
 
     companion object {
         private var lastProcessedTime = 0L
-        private const val DEBOUNCE_THRESHOLD = 1500
+        private const val DEBOUNCE_THRESHOLD = 1000
     }
 
     override fun onReceive(context: Context?, intent: Intent?) {
@@ -50,7 +50,7 @@ class CallReceiver : BroadcastReceiver() {
 
     private fun checkForMissedCall(context: Context) {
         val sharedPrefs = context.getSharedPreferences(Constants.SHARED_PREFS, Context.MODE_PRIVATE)
-        val msg = sharedPrefs.getString(Constants.APP_STATUS, "null") ?: "null"
+        val msg = sharedPrefs.getString(Constants.APP_STATUS, "") ?: ""
         if (ContextCompat.checkSelfPermission(context, Manifest.permission.READ_CALL_LOG) == PackageManager.PERMISSION_GRANTED) {
             val cursor = context.contentResolver.query(CallLog.Calls.CONTENT_URI, null, null, null, CallLog.Calls.DATE + " DESC")
             if (cursor?.moveToFirst() == true) {

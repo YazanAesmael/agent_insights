@@ -3,14 +3,13 @@ package com.yaxan.agent_insights.data.repository
 import android.content.SharedPreferences
 import com.yaxan.agent_insights.common.Constants.APP_STATUS
 import com.yaxan.agent_insights.common.Constants.IS_ACTIVE
-import com.yaxan.agent_insights.domain.model.PhoneCall
 import com.yaxan.agent_insights.domain.repository.Repository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 
 class RepositoryImpl(private val sharedPreferences: SharedPreferences) : Repository {
 
-    private val _status = MutableStateFlow<String?>(null)
+    private val _status = MutableStateFlow<String?>("")
     override val status: StateFlow<String?> = _status
 
     override suspend fun saveStatus(status: String) {
@@ -18,7 +17,7 @@ class RepositoryImpl(private val sharedPreferences: SharedPreferences) : Reposit
     }
 
     override suspend fun getStatus() {
-        val appStatus = sharedPreferences.getString(APP_STATUS, null)
+        val appStatus = sharedPreferences.getString(APP_STATUS, "")
         _status.emit(appStatus)
     }
 
